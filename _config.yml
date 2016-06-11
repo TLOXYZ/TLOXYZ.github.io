@@ -1,3 +1,4 @@
 title: TLO APP
 markdown: kramdown
 baseurl: "" # the subpath of your site, e.g. /blog
+cdnurl: "https://cdn.landcement.com/app"
