@@ -1,0 +1,7 @@
+pages:
+  stage: deploy
+  script:
+  - mkdir -p /var/www/site/app
+  - jekyll build --incremental -d /var/www/site/app
+  only:
+  - master
