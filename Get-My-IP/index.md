@@ -35,7 +35,7 @@ title: Get My IP
 
 <hr />
 
-This is a static page, using [apiTLO - My IP - JSONP]()
+This is a static page, using free [apiTLO](https://git.tlo.xyz/TLOxyz/API/wikis/my-ip#jsonp-api)
 
 <script>
 $.ajax({
