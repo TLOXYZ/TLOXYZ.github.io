@@ -2,21 +2,25 @@
 <html>
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-<title>{{ site.title }}</title>
+<title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 <link rel="canonical" href="https://app.tlo.xyz{{ site.baseurl }}{{ page.url }}" />
-<link href="{{ site.cdnurl }}/main.css" rel="stylesheet" type="text/css"/>
+<link href="{{ site.cdnurl }}/{{ site.version }}/main.css" rel="stylesheet" type="text/css"/>
 <meta name="viewport" content="width=device-width" />
+<script type="text/javascript" charset="utf-8" src="https://cdn.landcement.com/app/Guess-What-I-Said/js/jquery.min.js"></script>
 </head>
 <body>
 
 <div class="container">
 
-<h1>{{ site.title }}</h1>
+<h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
 
 {{ content }}
 
 <div id="more">
 	<a href="https://github.com/TLOxyz">GitHub</a>
 </div>
+
+</div>
+
 </body>
 </html>

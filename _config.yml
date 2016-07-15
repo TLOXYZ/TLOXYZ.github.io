@@ -1,6 +1,7 @@
-title: TLO APP
+title: appTLO
 markdown: kramdown
 baseurl: "" # the subpath of your site, e.g. /blog
 cdnurl: "https://cdn.landcement.com/app"
+version: "v0.1"
 keep_files: 
 - Guess-What-I-Said
