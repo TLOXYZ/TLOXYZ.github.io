@@ -42,28 +42,30 @@ $.ajax({
 	type: 'GET',
 	url: 'https://api.tlo.xyz/myip/jsonp.php',
 	dataType: 'jsonp',
-	crossDomain: true
+	crossDomain: true,
+	timeout: 10000
 }).done(function(response){
 	ipv4 = response.ip;
 	$("#ipv4").text(response.ip);
 	$("#ipv4country").text(response.country);
-	$.ajax({
-		type: 'GET',
-		url: 'https://ipv6-api.tlo.xyz/myip/jsonp.php',
-		dataType: 'jsonp',
-		crossDomain: true,
-		timeout: 10000
-	}).done(function(response){
-		$("#checkingipv6").hide();
-		$("#noipv6").hide();
-		$("#ipv6area").show();
-		$("#ipv6").text(response.ip);
-		$("#ipv6country").text(response.country);
-	}).fail(function(error){
-		$("#checkingipv6").text(error.statusText);
-		$("#noipv6").show();
-	});
 }).fail(function(error){
 	console.log(error.statusText);
+});
+
+$.ajax({
+	type: 'GET',
+	url: 'https://ipv6-api.tlo.xyz/myip/jsonp.php',
+	dataType: 'jsonp',
+	crossDomain: true,
+	timeout: 10000
+}).done(function(response){
+	$("#checkingipv6").hide();
+	$("#noipv6").hide();
+	$("#ipv6area").show();
+	$("#ipv6").text(response.ip);
+	$("#ipv6country").text(response.country);
+}).fail(function(error){
+	$("#checkingipv6").text(error.statusText);
+	$("#noipv6").show();
 });
 </script>
