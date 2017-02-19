@@ -1,7 +1,7 @@
 title: appTLO
 markdown: kramdown
 baseurl: "" # the subpath of your site, e.g. /blog
-cdnurl: "https://cdn.tlo.link/app"
+cdnurl: ""
 version: "v0.1"
 keep_files: 
 - Guess-What-I-Said
